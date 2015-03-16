@@ -17,9 +17,14 @@ $queryObject->setParams(array(
             'type' => 'RUBRICID',
             array(
                 'values' => array(
-                    'long' => 2994042422
-                )
-            )
+                    array(
+                        'long' => 123123,
+                    ),
+                    array(
+                        'long' => 123123,
+                    )
+                ),
+            ),
         )
     ),
     array(
