@@ -51,17 +51,20 @@ class ConvertArrayToXml implements IConvert {
         foreach($data as $key => $value) {
             if(is_array($value)) {
                 if(!is_numeric($key)){
-                    $subnode = $writer->addChild("$key");
-                    $this->getXml($value, $subnode);
-                }
-                else{
-                    $key = current(array_keys($value));
-                    $value = current($value);
                     $subnode = $writer->addChild($key);
                     $this->getXml($value, $subnode);
+                } else {
+                    $key = current(array_keys($value));
+                    $value = current($value);
+
+                    if(!is_array($value)) {
+                        $writer->addChild($key, $value);
+                    } else {
+                        $subnode = $writer->addChild($key);
+                        $this->getXml($value, $subnode);
+                    }
                 }
-            }
-            else {
+            } else {
                 $writer->addChild($key, $value);
             }
         }
