@@ -52,6 +52,7 @@ class IQBuzz {
      */
     public function setQueryObject(IQuery $object) {
         $this->queryObject = $object;
+        return $this;
     }
 
     /**
