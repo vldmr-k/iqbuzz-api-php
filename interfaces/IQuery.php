@@ -1,5 +1,7 @@
 <?php
 
+namespace wowkaster\iqbuzzapi\interfaces;
+
 /**
  * Interface IQuery
  */

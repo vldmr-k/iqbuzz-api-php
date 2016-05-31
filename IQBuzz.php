@@ -1,17 +1,7 @@
 <?php
 
-include __DIR__.'/interfaces/IQuery.php';
-include __DIR__.'/interfaces/IConvert.php';
-
-include __DIR__.'/helpers/ConvertArrayToXml.php';
-include __DIR__.'/helpers/ConvertXmlToArray.php';
-
-include __DIR__.'/queries/QueryAbstract.php';
-include __DIR__.'/queries/QueryXml.php';
-include __DIR__.'/queries/QuerySimple.php';
-
-include __DIR__.'/IQBuzzRequest.php';
-include __DIR__.'/IQBuzzResponse.php';
+namespace wowkaster\iqbuzzapi;
+use wowkaster\iqbuzzapi\interfaces\IQuery;
 
 
 /**

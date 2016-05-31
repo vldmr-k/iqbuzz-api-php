@@ -1,5 +1,9 @@
 <?php
 
+
+namespace wowkaster\iqbuzzapi\helpers;
+use wowkaster\iqbuzzapi\interfaces\IConvert;
+
 /**
  * Class ConvertXmlToArray
  */

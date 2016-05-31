@@ -1,6 +1,7 @@
 <?php
 
-include __DIR__."/../IQBuzz.php";
+use wowkaster\iqbuzzapi\IQBuzz;
+use wowkaster\iqbuzzapi\queries\QueryXml;
 
 $IQBuzz = new IQBuzz('login', 'apiCode');
 

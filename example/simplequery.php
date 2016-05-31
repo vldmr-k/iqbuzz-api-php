@@ -1,7 +1,8 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+use wowkaster\iqbuzzapi\IQBuzz;
+use wowkaster\iqbuzzapi\queries\QuerySimple;
+
 
 include __DIR__."/../IQBuzz.php";
 

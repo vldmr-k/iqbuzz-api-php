@@ -1,5 +1,8 @@
 <?php
 
+namespace wowkaster\iqbuzzapi\queries;
+
+
 class QueryAbstract {
     /**
      * @var string

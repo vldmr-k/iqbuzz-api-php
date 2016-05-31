@@ -1,5 +1,9 @@
 <?php
 
+namespace wowkaster\iqbuzzapi;
+
+use wowkaster\iqbuzzapi\helpers\ConvertXmlToArray;
+
 class IQBuzzResponse {
 
     private $xmlString;

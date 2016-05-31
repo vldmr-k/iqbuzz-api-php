@@ -1,0 +1,24 @@
+
+{
+  "name": "wowkaster/iqbuzzapi",
+  "description": "IBUzz api wrapper http://iqbuzz.pro",
+  "keywords": ["iqbuzz"],
+  "homepage": "https://github.com/wowkaster/iqbuzz-api-php",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vladimir Konchakovsky",
+      "email": "wowkaster@gmail.com",
+      "role": "Creator"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/wowkaster/iqbuzz-api-php/issues",
+    "source": "https://github.com/wowkaster/iqbuzz-api-php"
+  },
+  "autoload": {
+    "psr-4": {
+      "wowkaster\\iqbuzzapi\\": ""
+    }
+  }
+}
