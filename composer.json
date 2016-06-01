@@ -1,6 +1,6 @@
 
 {
-  "name": "wowkaster/iqbuzzapi",
+  "name": "wowkaster/iqbuzz-api-php",
   "description": "IBUzz api wrapper http://iqbuzz.pro",
   "keywords": ["iqbuzz"],
   "homepage": "https://github.com/wowkaster/iqbuzz-api-php",
