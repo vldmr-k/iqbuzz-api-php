@@ -69,7 +69,19 @@ class ConvertArrayToXml implements IConvert {
                     }
                 }
             } else {
-                $writer->addChild($key, $value);
+                if(preg_match('#^CDATA\:(.*)$#is', $value, $matches)) {
+                    $value = $matches[1];
+                    $child = $writer->addChild($key);
+
+                    if (!is_null($child)) {
+                        $node = dom_import_simplexml($child);
+                        $no   = $node->ownerDocument;
+                        $node->appendChild($no->createCDATASection($value));
+                    }
+
+                } else {
+                    $writer->addChild($key, $value);
+                }
             }
         }
     }
