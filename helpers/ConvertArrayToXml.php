@@ -60,7 +60,6 @@ class ConvertArrayToXml implements IConvert {
                 } else {
                     $key = current(array_keys($value));
                     $value = current($value);
-
                     if(!is_array($value)) {
                         $writer->addChild($key, $value);
                     } else {
@@ -72,13 +71,11 @@ class ConvertArrayToXml implements IConvert {
                 if(preg_match('#^CDATA\:(.*)$#is', $value, $matches)) {
                     $value = $matches[1];
                     $child = $writer->addChild($key);
-
                     if (!is_null($child)) {
                         $node = dom_import_simplexml($child);
                         $no   = $node->ownerDocument;
                         $node->appendChild($no->createCDATASection($value));
                     }
-
                 } else {
                     $writer->addChild($key, $value);
                 }

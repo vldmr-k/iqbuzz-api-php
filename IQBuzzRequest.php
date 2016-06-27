@@ -74,7 +74,14 @@ class IQBuzzRequest {
         $curl = curl_init();
 
         $queryString = $this->getQueryString();
-        $this->setOptions(CURLOPT_URL,  $this->url.'?'.$queryString);
+
+        if(isset($this->options[CURLOPT_POST]) && $this->options[CURLOPT_POST]) {
+            $this->setOptions(CURLOPT_URL,  $this->url);
+            $this->setOptions(CURLOPT_POST,  1);
+            $this->setOptions(CURLOPT_POSTFIELDS,  $queryString);
+        } else {
+            $this->setOptions(CURLOPT_URL,  $this->url.'?'.$queryString);
+        }
 
         curl_setopt_array($curl, $this->options);
         $resp = curl_exec($curl);

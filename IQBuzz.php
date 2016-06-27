@@ -57,6 +57,10 @@ class IQBuzz {
             $this->request->setParam($param, $value);
         }
 
+        foreach ($this->queryObject->getCurlOptions() as $param => $value) {
+            $this->request->setOptions($param, $value);
+        }
+
         return $this;
     }
 

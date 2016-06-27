@@ -8,8 +8,13 @@ namespace wowkaster\iqbuzzapi\interfaces;
 interface IQuery {
 
     /**
-     * @return mixed
+     * @return array
      */
     public function getQueryParams();
+
+    /**
+     * @return array
+     */
+    public function getCurlOptions();
 
 }

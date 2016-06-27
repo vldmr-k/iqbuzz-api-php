@@ -21,4 +21,10 @@ class QueryXml extends QueryAbstract implements IQuery {
             'reqStr' => $helper->convert($this->getParams())
         );
     }
+
+    public function getCurlOptions() {
+        return [
+            CURLOPT_POST => 1
+        ];
+    }
 }
